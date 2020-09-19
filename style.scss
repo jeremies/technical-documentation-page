@@ -1,7 +1,70 @@
+$black: black;
+
+:root {
+  --navbar-width: 30rem;
+}
+
 html {
   font-size: 10px;
 }
 
 body {
-  font: 2rem "Kumbh Sans", sans-serif;
+  font: 1.7rem "Work Sans", sans-serif;
+}
+
+#navbar {
+  height: 100%;
+  width: var(--navbar-width);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  border-right: 0.2rem solid $black;
+
+  header {
+    padding: 2rem;
+    font-size: 2.7rem;
+  }
+
+  a {
+    padding: 1.3rem 1rem 1.3rem 1.8rem;
+    text-decoration: none;
+    display: block;
+    color: $black;
+    font-size: 1.7rem;
+    border-top: 0.1rem solid $black;
+  }
+}
+
+#main-doc {
+  margin: 1rem 4rem 5rem var(--navbar-width);
+
+  .main-section {
+    header {
+      font-size: 3rem;
+      margin: 2rem;
+    }
+
+    p {
+      margin: 1rem 0rem 1rem 3.8rem;
+    }
+
+    ul {
+      margin-left: 3.8rem;
+
+      li {
+        margin: 1rem 0;
+      }
+    }
+
+    code {
+      font-size: 1.5rem;
+      background-color: #e6e6e6;
+      padding: 2rem;
+      margin: 1rem 0 1rem 5rem;
+      display: block;
+      border-radius: 0.5rem;
+    }
+  }
 }
