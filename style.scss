@@ -14,9 +14,21 @@ body {
 }
 
 #navbar {
-  height: 20rem;
-  overflow-y: scroll;
   border-bottom: 0.2rem solid $black;
+
+  .links {
+    height: 20rem;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
 
   header {
     padding: 2rem;
@@ -43,6 +55,10 @@ body {
     left: 0;
     border-right: 0.2rem solid $black;
     border-bottom: 0 !important;
+
+    .links {
+      height: calc(100% - 7.2rem);
+    }
   }
 
   #main-doc {
@@ -78,6 +94,16 @@ body {
       margin: 1rem 0 1rem 5rem;
       display: block;
       border-radius: 0.5rem;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        height: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
     }
   }
 }
